@@ -24,8 +24,7 @@
                 );
             }
 
-            $atts['src'] = CN_URL . 'includes/libraries/timthumb/timthumb.php?src=' .
-                CN_IMAGE_BASE_URL . $entry->getImageNameOriginal()
+            $atts['src'] = WP_CONTENT_URL . '/connections_templates/timthumb.php?src=' . urlencode($entry->getOriginalImageURL('photo'))
                 . '&amp;h=' . $atts['height']
                 . '&amp;w=' . $atts['width']
                 . '&amp;zc=' . $atts['zc'];
